@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kelli-dotcom/agent-etiquette/schemas/handoff.json",
+  "title": "AgentHandoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "from_agent",
+    "to_agent",
+    "task_id",
+    "status",
+    "verified_artifacts",
+    "blockers",
+    "next_action"
+  ],
+  "properties": {
+    "from_agent": { "type": "string", "minLength": 1 },
+    "to_agent": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["in_progress", "blocked", "ready_for_review", "done"]
+    },
+    "verified_artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_action": { "type": "string", "minLength": 1 }
+  }
+}
