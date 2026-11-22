@@ -1,0 +1,13 @@
+{
+  "protocol": "agent-etiquette",
+  "version": "v1.1.0",
+  "source_repo": "https://github.com/kelli-dotcom/agent-etiquette",
+  "createdAgentsMd": false,
+  "installed_at": "2026-11-22T19:47:16.576Z",
+  "files": {
+    "skills/agent-etiquette/SKILL.md": "a11665aed8651ef23a58f8fb57bfb652776ce0ff6c6b450e86c03eaa2aa0f810",
+    "schemas/handoff.json": "d63e40d9e9733de635afec50d8ca68750955549c4ec4fc9d0bb2639ff1c6bc9f",
+    "schemas/handoff-schema.md": "b38bbaccebd4a3bcd3e1fcf36e44226f907f8556a7a33dc4a89c8e960c40c9f6",
+    "scripts/validate-handoff.mjs": "b2a41e2f6d892cf27641c0459fb37a2251fc62ab77290a33b7de6b662700b804"
+  }
+}

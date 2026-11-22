@@ -24,6 +24,7 @@
 
 ## 4. Progressive Disclosure Pointers
 - **Universal AI Index:** [`llms.txt`](llms.txt)
+- **Default Public Toolkit (8 repos, excl. `openflex`):** [`templates/crta-master-toolkit.md`](crta-master-toolkit.md)
 - **Hardware Routing Matrix:** [`examples/hardware-profiles.md`](examples/hardware-profiles.md)
 - **Active Handoff State:** [`HANDOFF.md`](HANDOFF.md)
 - **Ecosystem Mistake Log:** [`mistakes.md`](mistakes.md)

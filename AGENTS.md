@@ -14,3 +14,10 @@
    - **Standard Hardware** *(16GB RAM Mac/PC)*: Max **3 active agents**, local IDE + lightweight dev server.
    - **Heavy Hardware** *(32GB+ RAM / workstation GPU)*: Max **3–5 scoped agents**, local containers & local LLM inference permitted.
 4. **Visible Files Only:** Never store agent context, handoffs, or rules in hidden dot-files.
+
+<!-- AGENT-ETIQUETTE:START version=v1.1.0 -->
+## Agent Etiquette Protocol (Layer 3 — Pinned `v1.1.0`)
+- **Hierarchy:** Platform constraints (Layer 1) → Repository rules above (Layer 2) → Agent Etiquette (Layer 3) → Task-specific skills (Layer 4) → Handoffs (Layer 5).
+- **Behavioral Rules:** Load `skills/agent-etiquette/SKILL.md` (zero filler, verified actions only, Rule of 2 retry cap, max 3 concurrent specialists).
+- **Handoff Contract:** Validate inter-agent handoffs against `schemas/handoff.json` (`node scripts/validate-handoff.mjs <file>`).
+<!-- AGENT-ETIQUETTE:END -->
