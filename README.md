@@ -57,9 +57,9 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (PC / Laptop & Mobile)
 
-### 1. The 1-Line `AGENTS.md` Pointer Pattern (Progressive Disclosure — Zero File Duplication)
+### 💻 1. PC / Laptop Quick Start (Mac, Windows, Linux & Chromebook) — 1-Line `AGENTS.md` Pointer Pattern
 
 Add a single line to any project's root `AGENTS.md` so any AI coding agent loads the skill and templates only when needed—without duplicating files across repositories:
 
@@ -74,7 +74,7 @@ git clone https://github.com/kelli-dotcom/universal-master-context.git
 cp universal-master-context/templates/code-context.md ./CONTEXT.md
 ```
 
-### 2. Mobile & Cloud Quick Start
+### 📱 2. Mobile Quick Start (iPhone, iPad & Android)
 
 <details>
 <summary><strong>📱 Download &amp; Use on Mobile (iOS / Android)</strong></summary>
