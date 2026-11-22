@@ -108,6 +108,22 @@ cp universal-master-context/templates/code-context.md ./CONTEXT.md
 
 ---
 
+## 🤝 Contributing
+
+We welcome new `<80`-line project-contour starter templates, hardware profile benchmarks, and progressive-disclosure improvements from both **human builders** and **AI coding agents**:
+
+```bash
+# 1. Fork & create a feature branch
+git checkout -b feat/your-contour-template
+
+# 2. Verify all templates stay under 80 lines & skills under 150 lines
+wc -l AGENTS.md skills/universal-master-context/SKILL.md templates/*.md examples/hardware-profiles.md
+```
+
+Read the full guide in **[`CONTRIBUTING.md`](CONTRIBUTING.md)** · **[Open an Issue](https://github.com/kelli-dotcom/universal-master-context/issues)** · **[Submit a Pull Request](https://github.com/kelli-dotcom/universal-master-context/pulls)**
+
+---
+
 ## 🌐 CRTA Tech Solutions Open-Source Ecosystem
 
 | Repository | What It Does |
