@@ -1,0 +1,20 @@
+# Universal Master Context
+
+> Lightweight, adaptive Master Context generator (`CONTEXT.md` / `MASTER_SPEC.md`) contoured to any project, AI model, agent skill, repository, and computer hardware spec.
+
+## Agent Entry Points (All Models)
+- `AGENTS.md` — Lightweight root router pointing agents to `skills/universal-master-context/SKILL.md` with `<150`-line weight cap and hardware concurrency guardrails.
+- `skills/universal-master-context/SKILL.md` — Core 3-step workflow for contouring and validating a `<150`-line Master Context.
+- `HANDOFF.md` — Active session state, verification command, and next step.
+- `mistakes.md` — Permanent "Never Repeat" guardrail log.
+
+## Key Paths
+- `templates/code-context.md` — Starter template for software repositories (`<80` lines).
+- `templates/creative-canon.md` — Starter template for books, worldbuilding, and brand canons (`<80` lines).
+- `templates/business-ops.md` — Starter template for SOPs, field operations, and compliance (`<80` lines).
+- `templates/multi-agent-context.md` — Starter template for multi-repo agent ecosystems (`<80` lines).
+- `examples/hardware-profiles.md` — Reference matrix mapping Light, Standard, and Heavy hardware profiles to model tiers and concurrency caps.
+- `preview/index.html` — Zero-dependency interactive HTML live demo generator.
+
+## Verification Command
+`wc -l AGENTS.md skills/universal-master-context/SKILL.md templates/*.md examples/hardware-profiles.md`

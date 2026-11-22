@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
+  <rect width="960" height="440" rx="8" fill="#0b1120" stroke="#334155" stroke-width="2"/>
+  <rect x="24" y="20" width="912" height="48" rx="6" fill="#111827" stroke="#1e293b"/>
+  <circle cx="46" cy="44" r="6" fill="#f43f5e"/>
+  <circle cx="66" cy="44" r="6" fill="#f59e0b"/>
+  <circle cx="86" cy="44" r="6" fill="#10b981"/>
+  <text x="114" y="49" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">universal-master-context · v1.0.0 — Contoured Master Context Engine (&lt;150 Lines)</text>
+  <rect x="780" y="31" width="140" height="26" rx="4" fill="#064e3b" stroke="#10b981"/>
+  <text x="850" y="48" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700" text-anchor="middle">ALL MODELS READY</text>
+
+  <!-- Column 1: 4 Project Contours -->
+  <rect x="24" y="84" width="286" height="332" rx="6" fill="#111827" stroke="#334155"/>
+  <text x="42" y="112" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">1. SELECT PROJECT CONTOUR</text>
+
+  <rect x="40" y="128" width="254" height="58" rx="4" fill="#1e293b" stroke="#10b981"/>
+  <text x="54" y="150" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Code / Repo</text>
+  <text x="54" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/code-context.md (&lt;80 lines)</text>
+
+  <rect x="40" y="198" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="54" y="220" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Creative / Canon</text>
+  <text x="54" y="240" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/creative-canon.md (&lt;80 lines)</text>
+
+  <rect x="40" y="268" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="54" y="290" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Business / Ops</text>
+  <text x="54" y="310" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/business-ops.md (&lt;80 lines)</text>
+
+  <rect x="40" y="338" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="54" y="360" fill="#c084fc" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Hybrid / Multi-Agent</text>
+  <text x="54" y="380" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/multi-agent-context.md</text>
+
+  <!-- Column 2: 3 Hardware Tiers -->
+  <rect x="328" y="84" width="286" height="332" rx="6" fill="#111827" stroke="#334155"/>
+  <text x="346" y="112" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">2. MATCH HARDWARE TIER</text>
+
+  <rect x="344" y="128" width="254" height="82" rx="4" fill="#1e293b" stroke="#f59e0b"/>
+  <text x="358" y="150" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">LIGHT · Mobile / 8GB / Chromebook</text>
+  <text x="358" y="170" fill="#e2e8f0" font-family="sans-serif" font-size="11">Cloud-First · 1–2 Active Agents Max</text>
+  <text x="358" y="190" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 60–90 lines (&lt; 1.5 KB)</text>
+
+  <rect x="344" y="222" width="254" height="82" rx="4" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="358" y="244" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">STANDARD · 16GB RAM Mac / PC</text>
+  <text x="358" y="264" fill="#e2e8f0" font-family="sans-serif" font-size="11">Local IDE + 1 Dev Server · 3 Agents Max</text>
+  <text x="358" y="284" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 80–120 lines (&lt; 2.5 KB)</text>
+
+  <rect x="344" y="316" width="254" height="82" rx="4" fill="#1e293b" stroke="#10b981"/>
+  <text x="358" y="338" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">HEAVY · 32GB+ RAM / GPU</text>
+  <text x="358" y="358" fill="#e2e8f0" font-family="sans-serif" font-size="11">Local Containers &amp; LLMs · 3–5 Agents</text>
+  <text x="358" y="378" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 100–150 lines (&lt; 3.5 KB)</text>
+
+  <!-- Column 3: Generated Master Context Output -->
+  <rect x="632" y="84" width="304" height="332" rx="6" fill="#111827" stroke="#10b981"/>
+  <text x="650" y="112" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">3. OUTPUT: CONTEXT.md (&lt;150 LINES)</text>
+
+  <rect x="648" y="128" width="272" height="268" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="662" y="152" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="12" font-weight="700"># Master Context (CONTEXT.md)</text>
+  <text x="662" y="178" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">1. Identity &amp; North Star (3 lines)</text>
+  <text x="662" y="202" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">2. Active Canon / Spec Locks</text>
+  <text x="662" y="226" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">3. Hardware Profile &amp; Concurrency</text>
+  <text x="662" y="250" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">4. Model, Skill &amp; Repo Routing</text>
+  <text x="662" y="274" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">5. Progressive Disclosure Pointers</text>
+  <text x="662" y="298" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">6. Current State &amp; Next Action</text>
+  <line x1="662" y1="320" x2="904" y2="320" stroke="#1e293b"/>
+  <text x="662" y="344" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ 0 File Duplication</text>
+  <text x="662" y="364" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Hardware-Matched Speed</text>
+  <text x="662" y="384" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Mobile &amp; Desktop Ready</text>
+</svg>

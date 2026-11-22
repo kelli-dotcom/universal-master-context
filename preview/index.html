@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Master Context — Interactive Contoured Context Generator</title>
+  <style>
+    :root { --bg:#0b1120; --panel:#111827; --card:#1e293b; --border:#334155; --text:#f8fafc; --muted:#94a3b8; --emerald:#10b981; --cyan:#0ea5e9; --amber:#f59e0b; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px; line-height:1.5; }
+    .container { max-width:1100px; margin:0 auto; }
+    .header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:18px; }
+    .badge { padding:5px 12px; border-radius:4px; font-size:12px; font-weight:700; font-family:ui-monospace,monospace; background:rgba(16,185,129,0.15); color:var(--emerald); border:1px solid var(--emerald); }
+    .grid { display:grid; grid-template-columns:340px 1fr; gap:18px; }
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:16px; }
+    .panel h2 { font-size:13px; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+    .control { margin-bottom:14px; }
+    .control label { display:block; font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; }
+    .control select, .control input { width:100%; background:var(--card); color:var(--text); border:1px solid var(--border); padding:8px 10px; border-radius:4px; font-size:13px; }
+    .code { background:#070b14; border:1px solid var(--border); border-radius:6px; padding:16px; font-family:ui-monospace,SFMono-Regular,monospace; font-size:12px; white-space:pre-wrap; color:#a7f3d0; min-height:340px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 style="font-size:22px;font-weight:800;">Universal Master Context · Live Context Generator</h1>
+        <p style="font-size:13px;color:var(--muted);">Contours CONTEXT.md (&lt;150 lines) to any project type, AI model mix, and computer hardware spec</p>
+      </div>
+      <div id="lineBadge" class="badge">68 LINES · ZERO DUPLICATION</div>
+    </div>
+    <div class="grid">
+      <div class="panel">
+        <h2>1. Configure Project &amp; Hardware</h2>
+        <div class="control">
+          <label>Project Name</label>
+          <input id="projName" value="Openflex" oninput="renderContext()" />
+        </div>
+        <div class="control">
+          <label>Project Contour</label>
+          <select id="contourSelect" onchange="renderContext()">
+            <option value="code">Code / Repo (templates/code-context.md)</option>
+            <option value="creative">Creative / Canon (templates/creative-canon.md)</option>
+            <option value="ops">Business / Ops (templates/business-ops.md)</option>
+            <option value="multi">Hybrid / Multi-Agent (templates/multi-agent-context.md)</option>
+          </select>
+        </div>
+        <div class="control">
+          <label>Hardware Tier</label>
+          <select id="hwSelect" onchange="renderContext()">
+            <option value="light">Light (Mobile / 8GB RAM / Chromebook — 1-2 agents)</option>
+            <option value="standard" selected>Standard (16GB RAM Mac/PC — 3 agents max)</option>
+            <option value="heavy">Heavy (32GB+ RAM / GPU — 3-5 scoped agents)</option>
+          </select>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>2. Generated Drop-In CONTEXT.md (Under 150 Lines)</h2>
+        <div id="outputBox" class="code"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const HW = {
+      light: { label: "Light (Mobile / 8GB RAM / Chromebook)", boundary: "Cloud-first execution (Codespaces / static preview / remote CI)", cap: "1–2 active agents max", budget: "60–90 lines (< 1.5 KB)" },
+      standard: { label: "Standard (16GB RAM Mac/PC)", boundary: "Local IDE + 1 active dev server + cloud/single-container DB", cap: "3 active agents max", budget: "80–120 lines (< 2.5 KB)" },
+      heavy: { label: "Heavy (32GB+ RAM / GPU)", boundary: "Full local containers, local vector DB & parallel worktree agents", cap: "3–5 scoped agents max", budget: "100–150 lines (< 3.5 KB)" }
+    };
+    function renderContext() {
+      const name = document.getElementById("projName").value || "MyProject";
+      const contour = document.getElementById("contourSelect").value;
+      const hw = HW[document.getElementById("hwSelect").value];
+      const text = `# Master Context — ${name} (CONTEXT.md)
+
+> **Contour:** ${contour.toUpperCase()} · **Hardware Tier:** ${hw.label}
+> **Progressive Disclosure Pointer:** Load skills/universal-master-context/SKILL.md on demand.
+
+## 1. Active Canon / Spec Locks
+- Keep root context under 150 lines (${hw.budget}); never duplicate schemas or deep docs inline.
+- Enforce clean-room MIT code, visible root governance files, and strict verification gates.
+
+## 2. Hardware Profile & Execution Rules
+- **Device Tier:** ${hw.label}
+- **Execution Boundary:** ${hw.boundary}
+- **Concurrency Cap:** ${hw.cap} (Rule of 2 loop breaker active)
+
+## 3. Model, Skill & Repo Routing Table
+| Task Type | Model Tier | Active Skill / Protocol | Target Path |
+| :--- | :--- | :--- | :--- |
+| Architecture & Context | Frontier Reasoning | skills/universal-master-context/SKILL.md | CONTEXT.md, design-spec/ |
+| Implementation / Draft | Balanced Coding | templates/${contour}-context.md | src/, templates/ |
+| Verification & QA | Strict Verifier | Zero-Mercy Gatekeeper | tests/, mistakes.md |
+
+## 4. Progressive Disclosure Pointers
+- Agent Router: AGENTS.md
+- Hardware Matrix: examples/hardware-profiles.md
+- Active Session State: HANDOFF.md
+- Permanent Guardrail Log: mistakes.md
+
+## 5. Current State & Next Action
+- **Verification Gate:** Under 150 lines · Zero file duplication · Hardware-matched
+- **Next Action:** Drop into project root as CONTEXT.md or MASTER_SPEC.md`;
+      document.getElementById("outputBox").textContent = text;
+    }
+    renderContext();
+  </script>
+</body>
+</html>
