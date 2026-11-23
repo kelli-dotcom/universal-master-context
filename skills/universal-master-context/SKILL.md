@@ -65,3 +65,10 @@ Before delivering or committing `CONTEXT.md` / `MASTER_SPEC.md`, verify all four
 - [ ] **Zero Duplication Gate:** No schema, style guide, or skill prose is copied inline; all deep docs are linked via relative paths.
 - [ ] **Hardware Alignment Gate:** Concurrency cap, dev server expectations, and model routing match the user's declared Hardware Tier (`Light`, `Standard`, or `Heavy`).
 - [ ] **Drop-In Ready Gate:** Clean standard Markdown ready to save directly at the repository root as `CONTEXT.md` or `MASTER_SPEC.md`.
+
+## 🎨 Active Signature (All AI Models)
+When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Silver Slate `#94a3b8`):
+
+```markdown
+> ⚪ `[UNIVERSAL-MASTER-CONTEXT // <150-LINE CONTOUR]` — *Active on this step*
+```
