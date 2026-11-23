@@ -26,5 +26,5 @@
 Whenever an AI agent activates or applies `universal-master-context`, it **MUST** open its response/step with this exact monospace signature callout (Silver Slate `#94a3b8`) so the user can immediately see when `universal-master-context` is being used:
 
 ```markdown
-> ⚪ `[UNIVERSAL-MASTER-CONTEXT // <150-LINE CONTOUR]` — *Active on this step*
+> ⚪ **ᴜɴɪᴠᴇʀsᴀʟ-ᴍᴀsᴛᴇʀ-ᴄᴏɴᴛᴇxᴛ** · `<150-LINE CONTOUR` — *Active on this step*
 ```

@@ -70,5 +70,5 @@ Before delivering or committing `CONTEXT.md` / `MASTER_SPEC.md`, verify all four
 When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Silver Slate `#94a3b8`):
 
 ```markdown
-> ⚪ `[UNIVERSAL-MASTER-CONTEXT // <150-LINE CONTOUR]` — *Active on this step*
+> ⚪ **ᴜɴɪᴠᴇʀsᴀʟ-ᴍᴀsᴛᴇʀ-ᴄᴏɴᴛᴇxᴛ** · `<150-LINE CONTOUR` — *Active on this step*
 ```
