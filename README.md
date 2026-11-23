@@ -138,3 +138,16 @@ Read the full guide in **[`CONTRIBUTING.md`](CONTRIBUTING.md)** · **[Open an Is
 | **[github-trending-kit](https://github.com/kelli-dotcom/github-trending-kit)** | AI agent & skill kit for top-GitHub READMEs, SEO topics & launch conversion |
 
 ✨ *Crafted by **CRTA Tech Solutions*** • MIT License • GitHub Topic: `crta-crafted`
+
+
+---
+
+### ⚡ Upgrade to the CRTA Pro Vault (`crta-tech-solutions/crta-pro-vault`)
+Want the complete, copy-paste-ready production system in one private repo + 1-tap mobile ZIP? Includes **Production `AGENTS.md` & Handoff Suite**, **High-Conversion Repo & Launch Kit**, and **3-Agent Specialist Squads + Master Context Blueprints**.
+
+- **Solo Pro Pack ($49 one-time):** [Get Instant Access →](https://polar.sh/kelli-dotcom/products/solo-pro-pack)
+- **Team Self-Serve License ($299/year):** [Get Team License →](https://polar.sh/kelli-dotcom/products/team-license)
+
+> *Self-serve digital files delivered instantly; no 1-on-1 support or custom calls included.*
+
+---
