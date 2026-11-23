@@ -21,3 +21,10 @@
 - **Behavioral Rules:** Load `skills/agent-etiquette/SKILL.md` (zero filler, verified actions only, Rule of 2 retry cap, max 3 concurrent specialists).
 - **Handoff Contract:** Validate inter-agent handoffs against `schemas/handoff.json` (`node scripts/validate-handoff.mjs <file>`).
 <!-- AGENT-ETIQUETTE:END -->
+
+## 🎨 Agent Active Signature (Visual Identification)
+Whenever an AI agent activates or applies `universal-master-context`, it **MUST** open its response/step with this exact monospace signature callout (Silver Slate `#94a3b8`) so the user can immediately see when `universal-master-context` is being used:
+
+```markdown
+> ⚪ `[UNIVERSAL-MASTER-CONTEXT // <150-LINE CONTOUR]` — *Active on this step*
+```

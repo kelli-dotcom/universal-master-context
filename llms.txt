@@ -18,3 +18,6 @@
 
 ## Verification Command
 `wc -l AGENTS.md skills/universal-master-context/SKILL.md templates/*.md examples/hardware-profiles.md`
+
+## Active Signature (Output When Used)
+> ⚪ `[UNIVERSAL-MASTER-CONTEXT // <150-LINE CONTOUR]` — *Active on this step* (Silver Slate `#94a3b8`)
