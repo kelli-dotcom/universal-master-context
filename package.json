@@ -1,0 +1,20 @@
+{
+  "name": "universal-master-context",
+  "version": "1.0.0",
+  "description": "Lightweight, adaptive Master Context generator contoured to any project, AI model, skill, repo, and computer spec.",
+  "type": "module",
+  "main": "scripts/validate-handoff.mjs",
+  "author": "CRTA Tech Solutions",
+  "license": "MIT",
+  "files": [
+    "skills/",
+    "templates/",
+    "examples/",
+    "preview/",
+    "scripts/",
+    "schemas/",
+    "README.md",
+    "llms.txt",
+    "LICENSE"
+  ]
+}
