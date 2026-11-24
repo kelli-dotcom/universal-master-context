@@ -1,4 +1,8 @@
-<h1 align="center">Universal Master Context</h1>
+<p align="center">
+  <a href="https://kelli-dotcom.github.io/universal-master-context/preview/">
+    <img src="demo/hero-banner.svg" alt="Universal Master Context — Architectural Blueprint (<150 Lines)" width="100%" />
+  </a>
+</p>
 
 <p align="center">
   <strong>Lightweight, adaptive Master Context generator (<code>CONTEXT.md</code> / <code>MASTER_SPEC.md</code> / canon / outline) contoured to any project, AI model, skill, repository, and computer spec.</strong><br />
@@ -6,7 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><strong>Quick Start</strong></a> ·
+  <a href="https://kelli-dotcom.github.io/universal-master-context/preview/"><strong>🚀 Live Interactive Demo</strong></a> ·
+  <a href="#-quick-start-pc--laptop--mobile"><strong>Quick Start</strong></a> ·
   <a href="#-what-why-who-when--how"><strong>Why It Works</strong></a> ·
   <a href="#-repository-directory"><strong>Directory</strong></a> ·
   <a href="skills/universal-master-context/SKILL.md"><strong>AI Skill</strong></a> ·
@@ -14,15 +19,25 @@
 </p>
 
 <p align="center">
+  <a href="https://kelli-dotcom.github.io/universal-master-context/preview/"><img src="https://img.shields.io/badge/Live_Demo-Launch_Generator-38bdf8?style=for-the-badge" alt="Launch Live Demo" /></a>
   <a href="https://github.com/kelli-dotcom/universal-master-context/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-10b981?style=for-the-badge" alt="v1.0.0" /></a>
-  <a href="#-quick-start-pc--laptop--mobile"><img src="https://img.shields.io/badge/Context_Cap-%3C_150_Lines-0ea5e9?style=for-the-badge" alt="Under 150 Lines" /></a>
+  <a href="#-quick-start-pc--laptop--mobile"><img src="https://img.shields.io/badge/Context_Cap-%3C_150_Lines-94a3b8?style=for-the-badge" alt="Under 150 Lines" /></a>
   <a href="AGENTS.md"><img src="https://img.shields.io/badge/All_AI_Models-Ready-059669?style=for-the-badge" alt="All AI Models Ready" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" /></a>
   <a href="https://github.com/kelli-dotcom"><img src="https://img.shields.io/badge/CRTA-Crafted-6f42c1?style=for-the-badge" alt="CRTA Crafted" /></a>
 </p>
 
+---
+
+## 📐 Live Interactive Blueprint Demo
+
+> 👉 **[Open the Live Contoured `CONTEXT.md` Generator →](https://kelli-dotcom.github.io/universal-master-context/preview/)**  
+> Switch between **Code / Repo**, **Creative / Canon**, **Business / Ops**, and **Multi-Agent** contours, pick your computer's **Light / Standard / Heavy** hardware tier, and copy or download a custom `< 150`-line `CONTEXT.md` in one click.
+
 <p align="center">
-  <img src="demo/preview.svg" alt="Universal Master Context — 4 Contours, 3 Hardware Tiers, Under 150 Lines" width="94%" />
+  <a href="https://kelli-dotcom.github.io/universal-master-context/preview/">
+    <img src="demo/preview.svg" alt="Universal Master Context — 3-Stage Architectural Blueprint Pipeline" width="96%" />
+  </a>
 </p>
 
 ---
@@ -49,8 +64,8 @@
 | [`templates/business-ops.md`](templates/business-ops.md) | Ready-to-copy Master Context starter for SOPs, field operations, compliance, and launches | `< 80 lines` |
 | [`templates/multi-agent-context.md`](templates/multi-agent-context.md) | Ready-to-copy Master Context starter for multi-repo ecosystems and orchestrated agent squads | `< 80 lines` |
 | [`examples/hardware-profiles.md`](examples/hardware-profiles.md) | Reference matrix mapping **Light**, **Standard**, and **Heavy** hardware profiles to model tiers, local/cloud execution boundaries, and concurrency caps | `< 60 lines` |
-| [`preview/index.html`](preview/index.html) | Zero-dependency interactive HTML live demo for contouring a custom `CONTEXT.md` in the browser | Live Demo |
-| [`demo/preview.svg`](demo/preview.svg) | Visual architecture diagram of the 3-step Contour + Hardware + Output pipeline | Visual Proof |
+| [`preview/index.html`](https://kelli-dotcom.github.io/universal-master-context/preview/) | Zero-dependency interactive blueprint generator ([**Launch Live App ↗**](https://kelli-dotcom.github.io/universal-master-context/preview/) · [source](preview/index.html)) | `< 11 KB` |
+| [`demo/hero-banner.svg`](demo/hero-banner.svg) & [`demo/preview.svg`](demo/preview.svg) | Custom Silver Architectural Blueprint hero banner & 3-stage pipeline schematic | Visual Brand |
 | [`HANDOFF.md`](HANDOFF.md) | Active session state, verification command, blockers, and exact next step | `< 20 lines` |
 | [`mistakes.md`](mistakes.md) | Permanent log of context-engineering anti-patterns and "Never Repeat" guardrails | `< 25 lines` |
 | [`LICENSE`](LICENSE) | MIT License (CRTA Tech Solutions) | Standard |

@@ -3,42 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universal Master Context — Interactive Contoured Context Generator</title>
+  <title>Universal Master Context — Interactive Blueprint Generator</title>
   <style>
-    :root { --bg:#0b1120; --panel:#111827; --card:#1e293b; --border:#334155; --text:#f8fafc; --muted:#94a3b8; --emerald:#10b981; --cyan:#0ea5e9; --amber:#f59e0b; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px; line-height:1.5; }
-    .container { max-width:1100px; margin:0 auto; }
-    .header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:18px; }
-    .badge { padding:5px 12px; border-radius:4px; font-size:12px; font-weight:700; font-family:ui-monospace,monospace; background:rgba(16,185,129,0.15); color:var(--emerald); border:1px solid var(--emerald); }
-    .grid { display:grid; grid-template-columns:340px 1fr; gap:18px; }
-    .panel { background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:16px; }
-    .panel h2 { font-size:13px; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
-    .control { margin-bottom:14px; }
-    .control label { display:block; font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; }
-    .control select, .control input { width:100%; background:var(--card); color:var(--text); border:1px solid var(--border); padding:8px 10px; border-radius:4px; font-size:13px; }
-    .code { background:#070b14; border:1px solid var(--border); border-radius:6px; padding:16px; font-family:ui-monospace,SFMono-Regular,monospace; font-size:12px; white-space:pre-wrap; color:#a7f3d0; min-height:340px; }
+    :root {
+      --bg: #071324;
+      --panel: rgba(11, 27, 49, 0.92);
+      --card: #102440;
+      --border: #334e73;
+      --silver: #cbd5e1;
+      --muted: #94a3b8;
+      --text: #f8fafc;
+      --cyan: #38bdf8;
+      --emerald: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 28px 20px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .topbar {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+      border: 1px dashed rgba(148, 163, 184, 0.55); background: var(--panel);
+      padding: 16px 20px; border-radius: 10px; margin-bottom: 20px;
+    }
+    .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: var(--cyan); letter-spacing: 1.8px; font-weight: 700; }
+    h1 { font-size: 24px; font-weight: 800; margin-top: 2px; }
+    .sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .badge {
+      padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      background: rgba(52, 211, 153, 0.14); color: var(--emerald); border: 1px solid rgba(52, 211, 153, 0.6);
+    }
+    .repo-link {
+      padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none;
+      color: var(--silver); border: 1px solid var(--border); background: var(--card);
+    }
+    .repo-link:hover { border-color: var(--cyan); color: #fff; }
+    .grid { display: grid; grid-template-columns: 360px 1fr; gap: 18px; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+    .panel h2 { font-family: ui-monospace, monospace; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
+    .control { margin-bottom: 14px; }
+    .control label { display: block; font-size: 12px; font-weight: 700; color: var(--silver); margin-bottom: 6px; }
+    .control select, .control input, .control textarea {
+      width: 100%; background: var(--card); color: var(--text); border: 1px solid var(--border);
+      padding: 9px 11px; border-radius: 6px; font-size: 13px; font-family: inherit;
+    }
+    .control select:focus, .control input:focus, .control textarea:focus { outline: none; border-color: var(--cyan); }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .btn {
+      cursor: pointer; border-radius: 6px; padding: 9px 14px; font-size: 12px; font-weight: 700;
+      border: 1px solid var(--cyan); background: var(--cyan); color: #061224; transition: 0.15s;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn-secondary { background: var(--card); color: var(--silver); border-color: var(--border); }
+    .btn-secondary:hover { border-color: var(--silver); color: #fff; }
+    .output-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .code {
+      background: #050d1a; border: 1px solid var(--border); border-radius: 8px; padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px;
+      white-space: pre-wrap; color: #e2e8f0; min-height: 410px; overflow-x: auto;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
+    <div class="topbar">
       <div>
-        <h1 style="font-size:22px;font-weight:800;">Universal Master Context · Live Context Generator</h1>
-        <p style="font-size:13px;color:var(--muted);">Contours CONTEXT.md (&lt;150 lines) to any project type, AI model mix, and computer hardware spec</p>
+        <div class="eyebrow">⚪ UNIVERSAL-MASTER-CONTEXT // INTERACTIVE ARCHITECTURAL BLUEPRINT</div>
+        <h1>Live Contoured <code>CONTEXT.md</code> Generator</h1>
+        <p class="sub">Pick your project contour and real hardware spec — generates a drop-in &lt; 150-line Master Context in real time.</p>
       </div>
-      <div id="lineBadge" class="badge">68 LINES · ZERO DUPLICATION</div>
+      <div class="badges">
+        <div id="lineBadge" class="badge">31 / 150 LINES · PASS</div>
+        <a class="repo-link" href="https://github.com/kelli-dotcom/universal-master-context" target="_blank" rel="noopener">GitHub Repo ↗</a>
+      </div>
     </div>
+
     <div class="grid">
       <div class="panel">
-        <h2>1. Configure Project &amp; Hardware</h2>
+        <h2>01 · Blueprint Parameters</h2>
         <div class="control">
-          <label>Project Name</label>
+          <label for="projName">Project / Canon / System Name</label>
           <input id="projName" value="Openflex" oninput="renderContext()" />
         </div>
         <div class="control">
-          <label>Project Contour</label>
-          <select id="contourSelect" onchange="renderContext()">
+          <label for="northStar">One-Line North Star</label>
+          <input id="northStar" value="Zero-cost, anti-ghost Remote-Truth job engine ingested from public ATS feeds." oninput="renderContext()" />
+        </div>
+        <div class="control">
+          <label for="contourSelect">Project Contour Template</label>
+          <select id="contourSelect" onchange="syncDefaults(); renderContext();">
             <option value="code">Code / Repo (templates/code-context.md)</option>
             <option value="creative">Creative / Canon (templates/creative-canon.md)</option>
             <option value="ops">Business / Ops (templates/business-ops.md)</option>
@@ -46,62 +111,175 @@
           </select>
         </div>
         <div class="control">
-          <label>Hardware Tier</label>
+          <label for="hwSelect">Device Hardware Tier</label>
           <select id="hwSelect" onchange="renderContext()">
-            <option value="light">Light (Mobile / 8GB RAM / Chromebook — 1-2 agents)</option>
-            <option value="standard" selected>Standard (16GB RAM Mac/PC — 3 agents max)</option>
-            <option value="heavy">Heavy (32GB+ RAM / GPU — 3-5 scoped agents)</option>
+            <option value="light">Light — Mobile / Chromebook / 8GB RAM (1–2 agents)</option>
+            <option value="standard" selected>Standard — 16GB RAM Mac / PC (Max 3 agents)</option>
+            <option value="heavy">Heavy — 32GB+ Workstation / GPU (3–5 scoped agents)</option>
           </select>
         </div>
+        <div class="control">
+          <label for="verifyCmd">Verification Command / Proof Gate</label>
+          <input id="verifyCmd" value="bun run typecheck && bun run build" oninput="renderContext()" />
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="copyContext()" id="copyBtn">Copy CONTEXT.md</button>
+          <button class="btn btn-secondary" type="button" onclick="downloadContext()">Download .md</button>
+        </div>
       </div>
+
       <div class="panel">
-        <h2>2. Generated Drop-In CONTEXT.md (Under 150 Lines)</h2>
-        <div id="outputBox" class="code"></div>
+        <div class="output-head">
+          <h2 style="margin-bottom:0;">02 · Live Blueprint Output (Drop into Project Root)</h2>
+          <span id="byteLabel" style="font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);"></span>
+        </div>
+        <pre id="outputBox" class="code"></pre>
       </div>
     </div>
   </div>
+
   <script>
     const HW = {
-      light: { label: "Light (Mobile / 8GB RAM / Chromebook)", boundary: "Cloud-first execution (Codespaces / static preview / remote CI)", cap: "1–2 active agents max", budget: "60–90 lines (< 1.5 KB)" },
-      standard: { label: "Standard (16GB RAM Mac/PC)", boundary: "Local IDE + 1 active dev server + cloud/single-container DB", cap: "3 active agents max", budget: "80–120 lines (< 2.5 KB)" },
-      heavy: { label: "Heavy (32GB+ RAM / GPU)", boundary: "Full local containers, local vector DB & parallel worktree agents", cap: "3–5 scoped agents max", budget: "100–150 lines (< 3.5 KB)" }
+      light: { label: "LIGHT (Mobile / Chromebook / <=8GB RAM)", boundary: "Cloud-first execution (Codespaces / remote CI / static preview)", cap: "Max 1–2 concurrent agents", budget: "60–90 lines (< 1.5 KB)" },
+      standard: { label: "STANDARD (16GB RAM Mac / PC)", boundary: "Local IDE + 1 active dev server + single DB container", cap: "Max 3 concurrent agents", budget: "80–120 lines (< 2.5 KB)" },
+      heavy: { label: "HEAVY (32GB+ RAM Workstation / GPU)", boundary: "Full local containers, vector index & parallel worktree agents", cap: "Max 3–5 scoped agents", budget: "100–150 lines (< 3.5 KB)" }
     };
-    function renderContext() {
-      const name = document.getElementById("projName").value || "MyProject";
-      const contour = document.getElementById("contourSelect").value;
-      const hw = HW[document.getElementById("hwSelect").value];
-      const text = `# Master Context — ${name} (CONTEXT.md)
 
-> **Contour:** ${contour.toUpperCase()} · **Hardware Tier:** ${hw.label}
-> **Progressive Disclosure Pointer:** Load skills/universal-master-context/SKILL.md on demand.
+    const CONTOURS = {
+      code: {
+        title: "Code / Repo",
+        file: "CONTEXT.md",
+        locks: [
+          "Keep every code file under 20 KB (Feather Standard) and root context under 150 lines.",
+          "Zero file duplication: link to schemas, specs, and skills via relative paths instead of pasting inline."
+        ],
+        rows: [
+          "| Architecture & Context | Frontier Reasoning | skills/universal-master-context/SKILL.md | CONTEXT.md, design-spec/ |",
+          "| Feature Implementation | Balanced Coding | templates/code-context.md | src/, scripts/ |",
+          "| QA & Regression Gate | Strict Verifier | Zero-Mercy Gatekeeper | tests/, mistakes.md |"
+        ]
+      },
+      creative: {
+        title: "Creative / Canon",
+        file: "CANON_CONTEXT.md",
+        locks: [
+          "Preserve voice, timeline continuity, and world rules strictly; never invent retcons silently.",
+          "Follow Eric Hayot's Uneven U (4 -> 3 -> 2 -> 1 -> 3 -> 5); avoid hit-and-run endings."
+        ],
+        rows: [
+          "| World & Arc Framing | Frontier Reasoning | templates/creative-canon.md | canon/, outline.md |",
+          "| Scene & Chapter Draft | Expressive Drafting | uneven-u-writing | chapters/, drafts/ |",
+          "| Continuity & Voice Check | Strict Editor | continuity-gate | mistakes.md, bible.md |"
+        ]
+      },
+      ops: {
+        title: "Business / Ops",
+        file: "OPS_CONTEXT.md",
+        locks: [
+          "Every SOP step must have a single owner, measurable acceptance check, and rollback path.",
+          "Never expose customer PII, credentials, or internal operator logs in shared docs."
+        ],
+        rows: [
+          "| SOP & Policy Design | Operations Lead | templates/business-ops.md | docs/, playbooks/ |",
+          "| Field Checklist & Forms | Fast Execution | agent-etiquette | checklists/, HANDOFF.md |",
+          "| Compliance & Audit | Strict Verifier | audit-gate | mistakes.md, reports/ |"
+        ]
+      },
+      multi: {
+        title: "Hybrid / Multi-Agent",
+        file: "CONTEXT.md",
+        locks: [
+          "Validate every state transition against schemas/handoff.json; pass verified file paths only.",
+          "Enforce Rule of 2 circuit breaker: halt and escalate immediately after 2 failed verifications."
+        ],
+        rows: [
+          "| Orchestration & Routing | Orchestrator (The Boss) | AGENTS.md | HANDOFF.md, schemas/ |",
+          "| Parallel Slice Execution | Specialist Squad | archetype-agent-vault | src/, scripts/ |",
+          "| Contract & Build Gate | Zero-Mercy Gatekeeper | agent-etiquette | tests/, mistakes.md |"
+        ]
+      }
+    };
 
-## 1. Active Canon / Spec Locks
-- Keep root context under 150 lines (${hw.budget}); never duplicate schemas or deep docs inline.
-- Enforce clean-room MIT code, visible root governance files, and strict verification gates.
+    const DEFAULTS = {
+      code: ["Openflex", "Zero-cost, anti-ghost Remote-Truth job engine ingested from public ATS feeds.", "bun run typecheck && bun run build"],
+      creative: ["CRTA Story World", "Kid-safe illustrated learning universe with strict character voice and canon locks.", "Verify canon bible + Uneven U 4->3->2->1->3->5 check"],
+      ops: ["School Kitchen Ops", "Daily temperature logging, HACCP food safety, and inspection-ready proof.", "Verify all daily temp logs + corrective action sign-offs"],
+      multi: ["CRTA Repoverse Squad", "Coordinated 3-agent build & audit pipeline across modular Feather repositories.", "node scripts/validate-handoff.mjs && node tests/smoke.test.mjs"]
+    };
 
-## 2. Hardware Profile & Execution Rules
-- **Device Tier:** ${hw.label}
-- **Execution Boundary:** ${hw.boundary}
-- **Concurrency Cap:** ${hw.cap} (Rule of 2 loop breaker active)
-
-## 3. Model, Skill & Repo Routing Table
-| Task Type | Model Tier | Active Skill / Protocol | Target Path |
-| :--- | :--- | :--- | :--- |
-| Architecture & Context | Frontier Reasoning | skills/universal-master-context/SKILL.md | CONTEXT.md, design-spec/ |
-| Implementation / Draft | Balanced Coding | templates/${contour}-context.md | src/, templates/ |
-| Verification & QA | Strict Verifier | Zero-Mercy Gatekeeper | tests/, mistakes.md |
-
-## 4. Progressive Disclosure Pointers
-- Agent Router: AGENTS.md
-- Hardware Matrix: examples/hardware-profiles.md
-- Active Session State: HANDOFF.md
-- Permanent Guardrail Log: mistakes.md
-
-## 5. Current State & Next Action
-- **Verification Gate:** Under 150 lines · Zero file duplication · Hardware-matched
-- **Next Action:** Drop into project root as CONTEXT.md or MASTER_SPEC.md`;
-      document.getElementById("outputBox").textContent = text;
+    function syncDefaults() {
+      const c = document.getElementById("contourSelect").value;
+      const [p, n, v] = DEFAULTS[c];
+      document.getElementById("projName").value = p;
+      document.getElementById("northStar").value = n;
+      document.getElementById("verifyCmd").value = v;
     }
+
+    function buildMarkdown() {
+      const name = document.getElementById("projName").value.trim() || "Untitled Project";
+      const northStar = document.getElementById("northStar").value.trim() || "Clear, verifiable project outcome.";
+      const cKey = document.getElementById("contourSelect").value;
+      const hw = HW[document.getElementById("hwSelect").value];
+      const cmd = document.getElementById("verifyCmd").value.trim() || "node tests/smoke.test.mjs";
+      const c = CONTOURS[cKey];
+
+      return `# Master Context — ${name} (\`${c.file}\`)
+
+> **Contour:** \`${c.title}\` · **Hardware Tier:** ${hw.label}
+> **North Star:** ${northStar}
+
+## 1. Immutable Spec & Canon Locks
+- ${c.locks[0]}
+- ${c.locks[1]}
+
+## 2. Hardware Profile & Execution Budget
+- **Target Budget:** ${hw.budget}
+- **Execution Boundary:** ${hw.boundary}
+- **Multi-Agent Cap:** ${hw.cap} · **Rule of 2** circuit breaker active
+
+## 3. Model, Skill & File Routing
+| Phase / Task | Model Tier | Active Skill / Template | Owned Paths |
+| :--- | :--- | :--- | :--- |
+${c.rows.join("\n")}
+
+## 4. Progressive Disclosure Pointers (Zero Duplication)
+- **Agent Contract:** [\`AGENTS.md\`](AGENTS.md)
+- **Universal AI Index:** [\`llms.txt\`](llms.txt)
+- **Session State & Guardrails:** [\`HANDOFF.md\`](HANDOFF.md) · [\`mistakes.md\`](mistakes.md)
+
+## 5. Verification Gate & Next Action
+- **Verification Command:** \`${cmd}\`
+- **Next Action:** Run verification gate, update \`HANDOFF.md\`, and list What Is Left To Do.`;
+    }
+
+    function renderContext() {
+      const md = buildMarkdown();
+      document.getElementById("outputBox").textContent = md;
+      const lines = md.split("\n").length;
+      const bytes = new TextEncoder().encode(md).length;
+      document.getElementById("lineBadge").textContent = `${lines} / 150 LINES · PASS`;
+      document.getElementById("byteLabel").textContent = `${bytes} bytes · 0 duplicated files`;
+    }
+
+    function copyContext() {
+      const md = buildMarkdown();
+      navigator.clipboard.writeText(md);
+      const btn = document.getElementById("copyBtn");
+      btn.textContent = "✓ Copied CONTEXT.md!";
+      setTimeout(() => { btn.textContent = "Copy CONTEXT.md"; }, 2200);
+    }
+
+    function downloadContext() {
+      const md = buildMarkdown();
+      const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "CONTEXT.md";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
     renderContext();
   </script>
 </body>

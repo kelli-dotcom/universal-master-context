@@ -1,66 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
-  <rect width="960" height="440" rx="8" fill="#0b1120" stroke="#334155" stroke-width="2"/>
-  <rect x="24" y="20" width="912" height="48" rx="6" fill="#111827" stroke="#1e293b"/>
-  <circle cx="46" cy="44" r="6" fill="#f43f5e"/>
-  <circle cx="66" cy="44" r="6" fill="#f59e0b"/>
-  <circle cx="86" cy="44" r="6" fill="#10b981"/>
-  <text x="114" y="49" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">universal-master-context · v1.0.0 — Contoured Master Context Engine (&lt;150 Lines)</text>
-  <rect x="780" y="31" width="140" height="26" rx="4" fill="#064e3b" stroke="#10b981"/>
-  <text x="850" y="48" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700" text-anchor="middle">ALL MODELS READY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.65"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
 
-  <!-- Column 1: 4 Project Contours -->
-  <rect x="24" y="84" width="286" height="332" rx="6" fill="#111827" stroke="#334155"/>
-  <text x="42" y="112" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">1. SELECT PROJECT CONTOUR</text>
+  <!-- Blueprint Sheet Frame -->
+  <rect width="980" height="430" rx="10" fill="#081526" stroke="#94a3b8" stroke-width="2"/>
+  <rect width="980" height="430" rx="10" fill="url(#grid)"/>
+  <rect x="14" y="14" width="952" height="402" rx="6" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6 4" opacity="0.45"/>
 
-  <rect x="40" y="128" width="254" height="58" rx="4" fill="#1e293b" stroke="#10b981"/>
-  <text x="54" y="150" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Code / Repo</text>
-  <text x="54" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/code-context.md (&lt;80 lines)</text>
+  <!-- Architectural Header -->
+  <rect x="28" y="26" width="924" height="44" rx="5" fill="#0e223d" stroke="#475569"/>
+  <text x="46" y="53" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700">SCHEMATIC PIPELINE // PROJECT CONTOUR  ──►  HARDWARE TIER  ──►  &lt; 150-LINE CONTEXT.md</text>
+  <rect x="774" y="35" width="164" height="26" rx="4" fill="#163256" stroke="#94a3b8"/>
+  <text x="856" y="52" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700" text-anchor="middle">0 DUPLICATED FILES</text>
 
-  <rect x="40" y="198" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
-  <text x="54" y="220" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Creative / Canon</text>
-  <text x="54" y="240" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/creative-canon.md (&lt;80 lines)</text>
+  <!-- Stage 1: 4 Project Contours -->
+  <rect x="28" y="88" width="276" height="312" rx="6" fill="#0b1b31" stroke="#64748b" stroke-width="1.3"/>
+  <text x="44" y="114" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" font-weight="700" letter-spacing="1">STAGE 01 · CONTOUR SHAPE</text>
 
-  <rect x="40" y="268" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
-  <text x="54" y="290" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Business / Ops</text>
-  <text x="54" y="310" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/business-ops.md (&lt;80 lines)</text>
+  <rect x="44" y="128" width="244" height="56" rx="4" fill="#122947" stroke="#38bdf8" stroke-width="1.4"/>
+  <text x="56" y="149" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="12.5" font-weight="700">Code / Repo Blueprint</text>
+  <text x="56" y="168" fill="#cbd5e1" font-family="sans-serif" font-size="11">Stack locks, entry points &amp; proof gate</text>
 
-  <rect x="40" y="338" width="254" height="58" rx="4" fill="#1e293b" stroke="#334155"/>
-  <text x="54" y="360" fill="#c084fc" font-family="ui-monospace, monospace" font-size="13" font-weight="700">Hybrid / Multi-Agent</text>
-  <text x="54" y="380" fill="#cbd5e1" font-family="sans-serif" font-size="11">templates/multi-agent-context.md</text>
+  <rect x="44" y="194" width="244" height="56" rx="4" fill="#0f223b" stroke="#475569"/>
+  <text x="56" y="215" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="12.5" font-weight="700">Creative / Canon Blueprint</text>
+  <text x="56" y="234" fill="#94a3b8" font-family="sans-serif" font-size="11">World rules, voice locks &amp; continuity</text>
 
-  <!-- Column 2: 3 Hardware Tiers -->
-  <rect x="328" y="84" width="286" height="332" rx="6" fill="#111827" stroke="#334155"/>
-  <text x="346" y="112" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">2. MATCH HARDWARE TIER</text>
+  <rect x="44" y="260" width="244" height="56" rx="4" fill="#0f223b" stroke="#475569"/>
+  <text x="56" y="281" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="12.5" font-weight="700">Business / Ops Blueprint</text>
+  <text x="56" y="300" fill="#94a3b8" font-family="sans-serif" font-size="11">SOPs, compliance &amp; owner handoffs</text>
 
-  <rect x="344" y="128" width="254" height="82" rx="4" fill="#1e293b" stroke="#f59e0b"/>
-  <text x="358" y="150" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">LIGHT · Mobile / 8GB / Chromebook</text>
-  <text x="358" y="170" fill="#e2e8f0" font-family="sans-serif" font-size="11">Cloud-First · 1–2 Active Agents Max</text>
-  <text x="358" y="190" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 60–90 lines (&lt; 1.5 KB)</text>
+  <rect x="44" y="326" width="244" height="56" rx="4" fill="#0f223b" stroke="#475569"/>
+  <text x="56" y="347" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="12.5" font-weight="700">Multi-Agent Blueprint</text>
+  <text x="56" y="366" fill="#94a3b8" font-family="sans-serif" font-size="11">3-agent cap, Rule of 2 &amp; JSON handoffs</text>
 
-  <rect x="344" y="222" width="254" height="82" rx="4" fill="#1e293b" stroke="#38bdf8"/>
-  <text x="358" y="244" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">STANDARD · 16GB RAM Mac / PC</text>
-  <text x="358" y="264" fill="#e2e8f0" font-family="sans-serif" font-size="11">Local IDE + 1 Dev Server · 3 Agents Max</text>
-  <text x="358" y="284" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 80–120 lines (&lt; 2.5 KB)</text>
+  <!-- Connector Arrow 1 -->
+  <line x1="304" y1="244" x2="334" y2="244" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="344" y="316" width="254" height="82" rx="4" fill="#1e293b" stroke="#10b981"/>
-  <text x="358" y="338" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">HEAVY · 32GB+ RAM / GPU</text>
-  <text x="358" y="358" fill="#e2e8f0" font-family="sans-serif" font-size="11">Local Containers &amp; LLMs · 3–5 Agents</text>
-  <text x="358" y="378" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">Target: 100–150 lines (&lt; 3.5 KB)</text>
+  <!-- Stage 2: 3 Hardware Profiles -->
+  <rect x="340" y="88" width="284" height="312" rx="6" fill="#0b1b31" stroke="#64748b" stroke-width="1.3"/>
+  <text x="356" y="114" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" font-weight="700" letter-spacing="1">STAGE 02 · HARDWARE FIT</text>
 
-  <!-- Column 3: Generated Master Context Output -->
-  <rect x="632" y="84" width="304" height="332" rx="6" fill="#111827" stroke="#10b981"/>
-  <text x="650" y="112" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">3. OUTPUT: CONTEXT.md (&lt;150 LINES)</text>
+  <rect x="356" y="130" width="252" height="78" rx="4" fill="#0f223b" stroke="#94a3b8"/>
+  <text x="370" y="151" fill="#f1f5f9" font-family="ui-monospace, monospace" font-size="12" font-weight="700">LIGHT · Mobile / Chromebook / 8GB</text>
+  <text x="370" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="11">Cloud-first · Max 1–2 active agents</text>
+  <text x="370" y="189" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10.5">Budget: 60–90 lines (&lt; 1.5 KB)</text>
 
-  <rect x="648" y="128" width="272" height="268" rx="4" fill="#070b14" stroke="#1e293b"/>
-  <text x="662" y="152" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="12" font-weight="700"># Master Context (CONTEXT.md)</text>
-  <text x="662" y="178" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">1. Identity &amp; North Star (3 lines)</text>
-  <text x="662" y="202" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">2. Active Canon / Spec Locks</text>
-  <text x="662" y="226" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">3. Hardware Profile &amp; Concurrency</text>
-  <text x="662" y="250" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">4. Model, Skill &amp; Repo Routing</text>
-  <text x="662" y="274" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">5. Progressive Disclosure Pointers</text>
-  <text x="662" y="298" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">6. Current State &amp; Next Action</text>
-  <line x1="662" y1="320" x2="904" y2="320" stroke="#1e293b"/>
-  <text x="662" y="344" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ 0 File Duplication</text>
-  <text x="662" y="364" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Hardware-Matched Speed</text>
-  <text x="662" y="384" fill="#10b981" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Mobile &amp; Desktop Ready</text>
+  <rect x="356" y="220" width="252" height="78" rx="4" fill="#122947" stroke="#38bdf8" stroke-width="1.4"/>
+  <text x="370" y="241" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="12" font-weight="700">STANDARD · 16GB RAM Laptop / PC</text>
+  <text x="370" y="260" fill="#e2e8f0" font-family="sans-serif" font-size="11">Local IDE + 1 server · Max 3 agents</text>
+  <text x="370" y="279" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10.5">Budget: 80–120 lines (&lt; 2.5 KB)</text>
+
+  <rect x="356" y="310" width="252" height="78" rx="4" fill="#0f223b" stroke="#94a3b8"/>
+  <text x="370" y="331" fill="#f1f5f9" font-family="ui-monospace, monospace" font-size="12" font-weight="700">HEAVY · 32GB+ Workstation / GPU</text>
+  <text x="370" y="350" fill="#cbd5e1" font-family="sans-serif" font-size="11">Local containers &amp; vector DB · 3–5 cap</text>
+  <text x="370" y="369" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10.5">Budget: 100–150 lines (&lt; 3.5 KB)</text>
+
+  <!-- Connector Arrow 2 -->
+  <line x1="624" y1="244" x2="654" y2="244" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: Blueprint Sheet Output -->
+  <rect x="660" y="88" width="292" height="312" rx="6" fill="#0b1b31" stroke="#cbd5e1" stroke-width="1.6"/>
+  <text x="676" y="114" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="12" font-weight="700" letter-spacing="1">STAGE 03 · BLUEPRINT SHEET</text>
+
+  <rect x="676" y="128" width="260" height="254" rx="4" fill="#06101e" stroke="#38bdf8"/>
+  <text x="690" y="152" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="12" font-weight="700"># Master Context (CONTEXT.md)</text>
+  <line x1="690" y1="162" x2="922" y2="162" stroke="#1e3a5f"/>
+  <text x="690" y="182" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="11">§1  Identity, Pillar &amp; North Star</text>
+  <text x="690" y="204" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">§2  Immutable Spec / Canon Locks</text>
+  <text x="690" y="226" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="11">§3  Hardware Tier &amp; Agent Cap</text>
+  <text x="690" y="248" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">§4  Skill &amp; Model Routing Table</text>
+  <text x="690" y="270" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="11">§5  Relative Pointers (No Copies)</text>
+  <text x="690" y="292" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">§6  Verification Command &amp; Next</text>
+  <line x1="690" y1="308" x2="922" y2="308" stroke="#1e3a5f"/>
+  <text x="690" y="330" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Claude · Gemini · Codex · Cursor</text>
+  <text x="690" y="350" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="11" font-weight="700">✓ Antigravity · Windsurf · Local LLM</text>
+  <text x="690" y="370" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10.5">DWG STATUS: VERIFIED &lt; 150 LINES</text>
 </svg>
