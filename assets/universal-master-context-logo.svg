@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Universal Master Context logo — a globe</title>
+  <rect x="4" y="4" width="232" height="232" rx="52" fill="#0f172a"/>
+  <circle cx="120" cy="120" r="84" fill="#88c0d0"/>
+  <g fill="none" stroke="#0f172a" stroke-width="7">
+    <ellipse cx="120" cy="120" rx="36" ry="84"/>
+    <line x1="36" y1="120" x2="204" y2="120"/>
+    <path d="M 48 78 Q 120 104 192 78"/>
+    <path d="M 48 162 Q 120 136 192 162"/>
+  </g>
+</svg>
