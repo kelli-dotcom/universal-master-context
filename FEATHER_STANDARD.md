@@ -42,11 +42,11 @@ and a README is supposed to be long. A demo gif alone is
   README is supposed to be long, and a picture is not code.
   They still have to earn their place, they just do not fail
   a code size check.
-- The whole master template: under 50 KB total. It is about
-  40 KB now, so there is room, but not room for bloat. This
-  was 40 KB in the first draft, and it was raised because the
-  master itself is docs heavy by design, and 40 KB left
-  almost no room for a new rule.
+- The whole master template: under 60 KB total. It is about
+  56 KB now, so there is room, but not room for bloat. This
+  was 40 KB in the first draft, then 50 KB, and it was raised
+  because the master itself is docs heavy by design, and the
+  lower numbers left almost no room for a new rule.
 - A kit's shipped engine file: under 6 KB. This comes from
   feather-themes, where the whole engine is under 6 KB and one
   theme is about 300 bytes.
@@ -68,7 +68,7 @@ code. It also skips .git, node_modules, dist, .next, build,
 blobs, uploads, and sessions, because those are generated or
 private, not code. It also lists how many dependencies the
 project has, so you can see them. If the master template itself
-grows past 50 KB total, the check says so too. A child repo
+grows past 60 KB total, the check says so too. A child repo
 made from the master does not have that total check, because a
 real app grows, but every code file in it still has to stay
 under 20 KB.

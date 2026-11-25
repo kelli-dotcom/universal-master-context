@@ -26,7 +26,7 @@ is already there.
   about 300 bytes) and the feather-speed idea of light by design.
   It defines feather true as one rule everywhere, not one size
   everywhere: a code file under 20 KB, a theme file under
-  8 KB, the master template under 50 KB total, a kit engine
+  8 KB, the master template under 60 KB total, a kit engine
   under 6 KB, a first screen under 50 KB of the project's own
   code. Docs and pictures are not counted in the code check.
   `scripts/verify.mjs` checks the per-file budget with node
@@ -96,6 +96,25 @@ is already there.
 - `skills/agent-etiquette/SKILL.md` — Copied as-is from agent-etiquette.
   It is already in 8 of her repos, and it is the shared behaviour rule
   for AI agents (zero filler, verified actions only, Rule of 2, 3-agent cap).
+- `skills/repo-audit/SKILL.md` — Written for this template, from the audit
+  of feather-themes. It proves a repo does what it says it does, by
+  measuring every claim a second time from the raw files, and it records
+  what counts as a finding.
+- `skills/skill-use/SKILL.md` — Written for this template. It makes sure
+  the skills were used, and lets the agent facilitate it. The record lives
+  in HANDOFF.md under "Skills used".
+- `skills/likeness-gate/SKILL.md` — Written for this template. The free
+  gate: it checks copy against a short voice standard the owner writes
+  by hand, before it ships. Human HQ is the paid method that builds the
+  deep standard.
+- `MASTER_SPEC.md` — Written for this template, from the owner's standing
+  rules. It is the master spec for every repo and project: what a repo must
+  be, what a per-project spec must hold, what a skill must do, and what is
+  checked before a launch or a sale.
+- `NATION.md` — Written for this template. The motherboard: every repo has
+  a layer and a position, like a country. Read it before creating a repo.
+- `ROUTES.md` — The data map and highway. Five highways, the table of
+  every repo, and the guide to the right ways. Every repo carries it.
 - `tests/smoke.test.mjs` — Style from agent-etiquette
   tests/install-and-schema.test.mjs, cut down to ONE smoke test. The full
   agent-etiquette test suite (9,518 bytes) was NOT copied.

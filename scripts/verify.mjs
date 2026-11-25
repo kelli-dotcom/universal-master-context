@@ -3,7 +3,7 @@
  * Master template check. Zero dependencies.
  * Confirms every required file in this template is present,
  * and that every code file is feather true: no code file over
- * 20 KB, and the master template itself under 50 KB total.
+ * 20 KB, and the master template itself under 60 KB total.
  * Docs and pictures are not code, so they are not counted.
  * See FEATHER_STANDARD.md for the rule and the budgets.
  * Usage: node scripts/verify.mjs
@@ -25,6 +25,9 @@ export const REQUIRED_FILES = [
   "CONTRIBUTING.md",
   "package.json",
   "MASTER_MANIFEST.md",
+  "MASTER_SPEC.md",
+  "NATION.md",
+  "ROUTES.md",
   "WHY_REPOVERSE.md",
   "FEATHER_STANDARD.md",
   "SECURITY.md",
@@ -34,6 +37,9 @@ export const REQUIRED_FILES = [
   "examples/example.md",
   "scripts/verify.mjs",
   "skills/agent-etiquette/SKILL.md",
+  "skills/repo-audit/SKILL.md",
+  "skills/skill-use/SKILL.md",
+  "skills/likeness-gate/SKILL.md",
   "tests/smoke.test.mjs",
   ".github/pull_request_template.md",
   ".github/ISSUE_TEMPLATE/bug-report.md",
@@ -43,7 +49,7 @@ export const REQUIRED_FILES = [
 export const FEATHER_CODE_BYTES = 20480;
 export const FEATHER_THEME_BYTES = 8192;
 export const FEATHER_PER_FILE_BYTES = FEATHER_CODE_BYTES;
-export const FEATHER_TEMPLATE_TOTAL_BYTES = 51200;
+export const FEATHER_TEMPLATE_TOTAL_BYTES = 61440;
 
 // Code files are checked by size. Docs and pictures are not
 // code, so they are skipped here. A README is supposed to be
